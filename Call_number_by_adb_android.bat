@@ -1,46 +1,39 @@
-mode con:cols=60 lines=10
-:author_edit
+:author
+REM Author @jzomerfeld
+:edit
+REM mode and following line define how big the console windows should be
+mode con:cols=65 lines=10
 @echo off
 	COLOR 7e
-	TITLE [Phone call - android, ADB must be installed]
+	TITLE [Phone_call - android, ADB must be installed]
 @echo off
+
 :begin
 cls
-REM Asking user for number to call / inserting the number variable and -call
-REM ECHO @REM Author @jzomerfeld
-	set /p UserInputPath=Hey! What number would You like to call? || Set UserInputPath=NothingChosen
-	
-If "%UserInputPath%"=="NothingChosen" goto sub_error
-If "%UserInputPath%" neq number goto sub_error
-REM If /i "%UserInputPath%"=="e" goto begin
-If /i "%UserInputPath%"=="cls" goto sub_cls
+REM setlocal
+
+		REM Asking user for number to call / inserting the number variable [number] and -call?
+set /p number= Hey! What number would You like to call? || Set number=NothingChosen
+	If "%number%"=="NothingChosen" goto sub_error
+	If "%number%"==digits goto call
 
 :call
 @echo off
-	adb -s "9885e6534e424f414e" shell am start -a android.intent.action.CALL -d tel:"%UserInputPath%"
+	adb -s "9885e6534e424f414e" shell am start -a android.intent.action.CALL -d tel:"%number%"
 :msg call
-		REM color fa
-		REM @echo [-------------------------------------]
-		REM @echo [-------------------------------------]
-		REM @echo [---------------Calling---------------]
-		REM @echo [--------------%UserInputPath%--------------]
-		REM @echo [-------------------------------------] *
-	REM @echo off
 color 1E
-echo.
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 1%%
 echo ----------------------------------
 ping -n 1 localhost >nul
-TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 10%%
 echo ----------------------------------
@@ -49,7 +42,7 @@ TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 15%%
 echo ----------------------------------
@@ -57,16 +50,15 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 20%%
 echo ----------------------------------
 ping -n 1 localhost >nul
-TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 25%%
 echo ----------------------------------
@@ -74,7 +66,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛˛ 35%%
 echo ----------------------------------
@@ -82,7 +74,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰ˛˛˛˛˛˛˛˛˛˛˛˛˛ 45%%
 echo ----------------------------------
@@ -90,7 +82,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰ˛˛˛˛˛˛˛˛˛˛ 50%%
 echo ----------------------------------
@@ -99,7 +91,7 @@ TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰ˛˛˛˛˛˛˛˛˛ 55%%
 echo ----------------------------------
@@ -107,7 +99,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰ˛˛˛˛˛˛˛˛ 60%%
 echo ----------------------------------
@@ -116,7 +108,7 @@ TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰ˛˛˛˛˛˛˛ 65%%
 echo ----------------------------------
@@ -124,7 +116,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰ˛˛˛˛˛˛ 70%%
 echo ----------------------------------
@@ -132,7 +124,7 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ˛˛˛˛ 80%%
 echo ----------------------------------
@@ -141,7 +133,7 @@ TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ˛˛˛ 85%%
 echo ----------------------------------
@@ -149,16 +141,15 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ˛˛ 90%%
 echo ----------------------------------
 ping -n 1 localhost >nul
-TIMEOUT /T 1 /NOBREAK > NUL
 cls
 echo.
 echo.
-echo Calling... %UserInputPath%
+echo Calling... %number%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ˛ 95%%
 echo ----------------------------------
@@ -166,12 +157,12 @@ ping -n 1 localhost >nul
 cls
 echo.
 echo.
-echo Call complete... %UserInputPath%
 echo ----------------------------------
 echo Progress: ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ 100%%
+echo Call complete... %number%
 echo.
 echo.
-TIMEOUT /T 7		
+TIMEOUT /T 5		
 @echo off |clip
 COLOR 7e
 cls
@@ -181,14 +172,14 @@ goto begin
 
 :sub_cls
 echo Nothing was chosen - cleaning
-TIMEOUT /T 4
+TIMEOUT /T 5
 goto begin
 
 
 :sub_error
 ECHO Invaid number! Bye!
 ECHO Try again!
-TIMEOUT /T 4
+TIMEOUT /T 5
 goto begin
 
 
