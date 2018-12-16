@@ -3,9 +3,11 @@ It's a cmd console / batch script file to ask for number and call it by oparatin
 
 
 v3
-- Added progress bar
+- 
 - Added fliter by number & show error when it's not integer 
+
 V2
+-Added progress bar
 
 V1
 
