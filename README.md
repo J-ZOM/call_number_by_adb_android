@@ -1,5 +1,6 @@
 ### Call_number_by_adb_android
 It's a cmd console / batch script file to ask for number and call it by oparating through adb command for android phones, need to be checked "USB debugging".
+   ###### TIP1* Android device have to have **Developers options** turned on
 
 ## SOON  TO-DO
 
@@ -29,3 +30,16 @@ It's a cmd console / batch script file to ask for number and call it by oparatin
 - Ask You for input of the phone number.
 - Shows SUCCES / ERROR message.
 - Loop to the begin after call/wrong call.
+
+
+*TIP1 - You can unlock the Developer options on any Android by locating
+the Build number in your Settings menu and tapping it multiple times.*
+``` If using stock Android, go to Settings > About phone > Build number.
+   - On a Samsung Galaxy device, go to Settings > About device > Build number.
+   - On an HTC device, go to Settings > About > Software information > More > Build number. 
+   - On an LG device, go to Settings > About phone > Software info > Build number.
+
+Tap Build number 5 times. After the first few taps, you should see the steps counting down
+until you unlock the developer options. Once activated, you will see a message that reads, 
+“You are now a developer!”
+Go back to Settings, where you’ll find a Developer options entry in the menu.```
