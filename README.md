@@ -2,18 +2,9 @@
 It's a cmd console / batch script file to ask for number and call it by oparating through adb command for android phones, need to be checked "USB debugging".
    ###### TIP1* Android device have to have **Developers options** turned on
 
-## SOON  TO-DO
+## PLAN TO-DO / fixes
 
-**- filter values by integer and specific number length**
-
-~~-Find connected device by USB~~
-- Integrate usb adb & WiFi adb
-   - prompt for choosing wifi  or USB module
-   - discovery nearby /  connected devices
-
- ~~- option to reconnect device if it's not visible~~
-
-- option/ command to "end call"
+** [Click to see - Project plans & progress & fixes](https://github.com/J-ZOM/call_number_by_adb_android/projects/1).
 
 ###### v4
  - Console automatically search for connected device by USB and creat an external file with saved device_id, ten use defined device_id later to make a call, after loop the saved file is deleted.
@@ -31,6 +22,8 @@ It's a cmd console / batch script file to ask for number and call it by oparatin
 - Shows SUCCES / ERROR message.
 - Loop to the begin after call/wrong call.
 
+
+### TIPS
 
 *TIP1 - You can unlock the Developer options on any Android by locating
 the Build number in your Settings menu and tapping it multiple times.*
